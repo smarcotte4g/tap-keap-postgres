@@ -26,7 +26,7 @@ setup(
     extras_require={"test": ["pytest==7.2.2", "pylint==2.12.*", "pytest-cov==4.0.0"]},
     entry_points="""
           [console_scripts]
-          tap-postgres=tap_keap_postgres:main
+          tap-keap-postgres=tap_keap_postgres:main
       """,
     packages=["tap_keap_postgres", "tap_keap_postgres.sync_strategies"],
 )
