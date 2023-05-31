@@ -8,14 +8,14 @@ venv:
 
 pylint:
 	. ./venv/bin/activate ;\
-	pylint --rcfile .pylintrc tap_postgres/
+	pylint --rcfile .pylintrc tap_keap_postgres/
 
 start_db:
 	docker-compose up -d
 
 unit_test:
 	. ./venv/bin/activate ;\
-	coverage run --data-file=.coverage.unit --source=tap_postgres -m pytest -v tests/unit ;\
+	coverage run --data-file=.coverage.unit --source=tap_keap_postgres -m pytest -v tests/unit ;\
 
 unit_test_cov: unit_test
 	. ./venv/bin/activate ;\
@@ -24,7 +24,7 @@ unit_test_cov: unit_test
 integration_test:
 	. ./venv/bin/activate ;\
 	. ./tests/integration/env ;\
-	coverage run --data-file=.coverage.integration --source=tap_postgres -m pytest -v tests/integration ;\
+	coverage run --data-file=.coverage.integration --source=tap_keap_postgres -m pytest -v tests/integration ;\
 
 integration_test_cov: integration_test
 	. ./venv/bin/activate ;\

@@ -5,10 +5,10 @@ from typing import Dict, List
 
 import singer
 from singer import metadata
-from tap_postgres.db import open_connection
-from tap_postgres.discovery_utils import discover_db
+from tap_keap_postgres.db import open_connection
+from tap_keap_postgres.discovery_utils import discover_db
 
-LOGGER = singer.get_logger("tap_postgres")
+LOGGER = singer.get_logger("tap_keap_postgres")
 
 
 def dump_catalog(all_streams: List[Dict]) -> None:
